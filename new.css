@@ -1,0 +1,13 @@
+body{
+    font-family: 'Merriweather', sans-serif;
+}
+
+footer{
+    display: inline;
+    bottom: 0;
+}
+
+.login{
+    border: 1px solid black;
+    width: 200px;
+}
