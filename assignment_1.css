@@ -1,13 +1,13 @@
 body{
     font-family: 'Caveat Brush', cursive;
-    background-color: cornflowerblue;
+    background-color: #54c3ef;
 }
 
 header{
     background-color: black;
     color: white;
     padding: 10px;
-    
+    font-family: sans-serif;
 }
 
 .views{
@@ -16,8 +16,13 @@ header{
 }
 
 .icons{
-    float: right;
     display: inline;
+    
+    /* padding-top: 1%0; */
+    /* margin-right: 20px; */
+    /* margin-bottom: 50px; */
+    /* float: right; */
+    /* margin-bottom: 0px; */
 }
 
 article{
@@ -28,34 +33,35 @@ article{
 
 main{
     background-color: white;
-    width: 85%;
+    width: 55%;
     font-family: sans-serif;
     display: flex;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     border-radius: 6px;
-    padding: 16px;
-    padding-right: 0;
-    margin: 2% 30% 6% 6%;
-    margin-right: 1200px;
+    padding-left: 16px;
+    /* padding-right: 0; */
+    margin: 2% 20% 6%;
+    /* margin-right: 1200px; */
 }
 
 
 section{
     background-color: white;
-    width: 50%;
-    height: calc(main);
+    /* width: 55%; */
     font-family: sans-serif;
-    text-align: left;
+    /* text-align: left; */
     display: inline-block;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     border-radius: 6px;
-    padding: 10px;
+    padding-right: 10px;
     /* float: left; */
-    border: 1px dashed black;
+    
+    border-right: 1px dashed black;
+    border-collapse: collapse;
 }
 
 aside{
-    width: 30%;
+    /* width: 20%; */
     float: right;
     display: inline;
     /* background-color: white; */
@@ -63,12 +69,21 @@ aside{
 
 section p{
     width: 100%;
+    font-size: 20px;
     display: inline-block;
+    text-align: left;
+    
+}
+
+figure{
+    padding-bottom: 10px;
+    border: 1px dashed black;
+    border-radius: 6px;
 }
 
 .images{
     width: 300px;
-    border: 1px dashed black;
+    /* border: 1px dashed black; */
     
 }
 
@@ -77,6 +92,12 @@ figcaption{
 }
 
 
-.content h3{
-    float: left;
+.content h2{
+    /* float: left; */
+}
+
+footer{
+    background-color: whitesmoke;
+    font-size: 30px;
+    text-align: center;
 }
