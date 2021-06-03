@@ -1,0 +1,74 @@
+body{
+    font-family: 'Caveat Brush', cursive;
+    background-color: cornflowerblue;
+}
+
+header{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    
+}
+
+.views{
+    display: inline;
+    float: left;
+}
+
+.icons{
+    float: inline-end;
+    display: inline;
+}
+
+article{
+    color: darkgoldenrod;
+    font-size: 65px;
+    text-align: center;
+}
+
+main{
+    background-color: white;
+    width: 100%;
+    font-family: sans-serif;
+    display: flex;
+    box-sizing: border-box;
+    border-radius: 6px;
+    padding: 4% 16%;
+    margin: 2% 30% 3% 10%;
+}
+
+
+section{
+    background-color: white;
+    width: 60%;
+    font-family: sans-serif;
+    /* display: flex; */
+    box-sizing: border-box;
+    border-radius: 6px;
+    padding: 10px;
+    float: left;
+    border: 1px dashed black;
+}
+
+section p{
+    width: 600px;
+}
+
+.images{
+    width: 300px;
+    border: 1px dashed black;
+    
+}
+
+figcaption{
+    font-weight: 700;
+}
+
+aside{
+    width: 40%;
+    /* float: right; */
+    display: inline;
+}
+.content h3{
+    /* float: left; */
+}
