@@ -1,22 +1,40 @@
-p{
-    color: blue;
+body{
+    font-family: 'Roboto', sans-serif;
 }
 
-#two{
-    color: red;
+.navbar{
+    border-bottom: 1px solid black;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
 }
 
-.para{
-    color: rgb(129, 20, 56);
-    font-size: 25px;
+.li-items{
+    font-size: 20px;
+    padding: 0 20px 20px;
+    display: inline-block;
 }
 
+#title, .product-title{
+    text-align: center;
+}
+.product{
+    display: inline-block;
+    margin: 0px 10px;
+    /* width: 240px;
+    height: 200px; */
+}
 
-.app{
-    display: flex;
-    font-size: 55px;
-    width: 300px;
-    border: 1px dashed black;
-    padding: 10px 20px 30px 40px;
-    margin: 10px 20px 30px 40px;
+.product img{
+    width: 200px;
+    height: 200px;
+}
+
+table, th, td{
+    border: 1px solid black;
+/*     padding: 10px; */
+    border-colapse: colapse;
+}
+.rows{
+    background-color: cornflowerblue;
 }
