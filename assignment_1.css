@@ -16,7 +16,7 @@ header{
 }
 
 .icons{
-    float: inline-end;
+    float: right;
     display: inline;
 }
 
@@ -28,30 +28,42 @@ article{
 
 main{
     background-color: white;
-    width: 100%;
+    width: 85%;
     font-family: sans-serif;
     display: flex;
     box-sizing: border-box;
     border-radius: 6px;
-    padding: 4% 16%;
-    margin: 2% 30% 3% 10%;
+    padding: 16px;
+    padding-right: 0;
+    margin: 2% 30% 6% 6%;
+    margin-right: 1200px;
 }
 
 
 section{
     background-color: white;
-    width: 60%;
+    width: 50%;
+    height: calc(main);
     font-family: sans-serif;
-    /* display: flex; */
+    text-align: left;
+    display: inline-block;
     box-sizing: border-box;
     border-radius: 6px;
     padding: 10px;
-    float: left;
+    /* float: left; */
     border: 1px dashed black;
 }
 
+aside{
+    width: 30%;
+    float: right;
+    display: inline;
+    /* background-color: white; */
+}
+
 section p{
-    width: 600px;
+    width: 100%;
+    display: inline-block;
 }
 
 .images{
@@ -64,11 +76,7 @@ figcaption{
     font-weight: 700;
 }
 
-aside{
-    width: 40%;
-    /* float: right; */
-    display: inline;
-}
+
 .content h3{
-    /* float: left; */
+    float: left;
 }
