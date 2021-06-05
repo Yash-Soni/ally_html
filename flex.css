@@ -1,0 +1,89 @@
+.Flex{
+    display: flex;
+    /* width: 70%; */
+    height: 600px;
+
+    flex-direction: column-reverse;
+
+    justify-content: space-between;
+}
+
+.one-flex, .two-flex, .three-flex{
+    border: 2px solid black;
+    width: 100px;
+    height: 100px;
+    padding: 30px;
+    font-size: 20px;
+    width: 40px;
+    position: relative;
+}
+
+.one-point{
+    position: absolute;
+    bottom: 0;
+    right: 0;   
+}
+
+.window{
+    position: fixed;
+    top: 5%;
+    left: 35%;
+    background-color: blanchedalmond;
+    height: 600px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.window-header{
+
+    height: 80px;
+    background-color: #837587;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    
+}
+
+.window-body{
+    border-top: 1px solid black;
+}
+
+.window-footer{
+
+    height: 80px;
+    display: flex;
+    margin-top: auto;
+    flex-direction: row-reverse;
+    display: ;
+    padding-right: 20px;
+}
+
+
+.container{
+    animation: boxAnimation 5s infinite;
+    height: 200px;
+    width: 200px;
+    animation-direction: alternate;
+    background-color: cadetblue;
+    animation-fill-mode: forwards;
+    position: relative;
+    margin-left: 200px;
+}
+
+@keyframes boxAnimation {
+    from {top: 0px;}
+    to {top:500px; background-color: chartreuse;}
+
+    /* from {top:500px;}
+    to {top:0px;} */
+}
+
+/* li{
+    width: 100px;
+} */
+
+ul li:nth-child(3n){
+    background-color: chocolate;
+}

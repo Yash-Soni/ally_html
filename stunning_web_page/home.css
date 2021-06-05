@@ -1,0 +1,150 @@
+body{
+    background-color: azure;
+}
+
+header{
+    /* display: inline-block; */
+    /* width: 50px; */
+    margin-top: 0;
+    padding: 20px;
+    width: 100%;
+    background-color: white;
+}
+
+.navbar p{
+    display: inline-block;
+    width: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 20px;
+    color: grey;
+}
+
+.navbar p:hover{
+    color: black;
+    text-decoration: 5px underline blue;
+}
+
+#home{
+    margin-left: 580px;
+}
+
+.navbar button{
+    float: right;
+    margin-right: 30px;
+    margin-bottom: 5px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding: 24px 35px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    background-color: pink;
+    color: blue;
+    border: none;
+}
+
+#logo{
+    float: left;
+    margin-left: 0;
+    margin-top: 0;
+    width: 175px;
+    height: 70px;
+}
+
+/* ---------------------------------------------------------------- */
+
+
+.main{
+    width: 80%;
+    height: 120%;
+    margin-left: 18%;
+    margin-right: 8%;
+    display: flex;
+}
+
+.section{
+    width: 30%;
+    background-color: whitesmoke;
+}
+
+.section p{
+    word-spacing: 1px;
+    font-family: 'Roboto';
+}
+
+h1{
+    font-size: 65px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+b{
+    color: blueviolet;    
+}
+
+.new-account{
+    background-color: purple;
+    color: white;
+    font-size: 12px;
+    border-radius: 18px;
+    padding: 22px 33px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+.article{
+    margin-top: 10px;
+    display: flex;
+    margin-left: 15px;
+}
+
+.arrow-down{
+    margin-left: 70px;
+    margin-top: 0px;
+    padding: 5px;
+    /* height: 125px; */
+    /* width: 125px; */
+    /* padding-top: 20px; */
+
+}
+
+.names{
+    margin-top: 80px;
+}
+
+.not-sel{
+    display: flex;
+    justify-content: space-between;
+    background-color: whitesmoke;
+    width: 90%;
+    padding: 5px 10px;
+    border-radius: 5%;
+    margin: 4px 5px;
+}
+
+.selected{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 5%;
+    margin: 4px 5px;
+}
+
+.date{
+    /* font-weight: 100px; */
+    color: gray;
+}
+
+.aside{
+    width: 60%;
+    background-color: white;
+
+}
+
