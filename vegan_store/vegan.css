@@ -3,7 +3,7 @@
     height: 40px;
 }
 
-.container {
+/* .container {
     position: relative;
     text-align: center;
     color: white;
@@ -14,4 +14,10 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
+  } */
+
+  .green-fonts{
+    color: #91ac41;
+    font-size: 24px;
+    font-family: 'Caveat', cursive;
+}

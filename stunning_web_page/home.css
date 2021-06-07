@@ -125,14 +125,15 @@ b{
 
 .names.text{
     margin-left: 0;
+    
     text-align: left;
 }
 
-#users{
+/* #users{
     width: 90%;
-    /* height: 40%; */
+    height: 40%; 
     text-align: left;
-}
+} */
 
 .not-sel{
     display: flex;
@@ -146,6 +147,7 @@ b{
 
 .avatar{
     align-items: center;
+    margin-right: 0;
 }
 
 .selected{
