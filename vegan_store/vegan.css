@@ -18,9 +18,29 @@
   display: none;
 } */
 
+body{
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+}
 
+.text-uppercase{
+  font-size: 44px;
+  font-weight: 600;
+  font-family: 'Poppins' sans-serif !important;
+  margin: 0;
+  margin-bottom: 8px;
+  padding-bottom: 5px;
+}
 
-.header{
+.sub-heading{
+  font-size: 16px;
+  font-weight: 400;
+  color: #8b8b99;
+  letter-spacing: 0.5px;
+  padding-top: 5px;
+}
+
+#header{
   position: fixed;
   width: 100%;
   margin: 0;
@@ -109,10 +129,7 @@
     height: 40px;
 }
 
-body{
-  font-family: 'Poppins' sans-serif;
-  margin: 0;
-}
+
 
 /* .container {
     position: relative;
@@ -153,7 +170,7 @@ body{
   padding: 0;
 }
 
-.banner{
+#banner{
   /* margin: 0; */
   /* padding: 0;
   max-width: 100%; */
@@ -170,52 +187,119 @@ body{
   font-family: 'Poppins' sans-serif;
 }
 
+.centered{
+  margin-left: 50px;
+}
+
 .centered h1{
-    letter-spacing: 12px;
+    letter-spacing: 10px;
     /* display: flex;
     justify-content: center;
     align-items: center; */
     text-align: center;
     max-width: 1100px;
-    font-weight: 700;
+    font-weight: 600;
     margin: 0;
-    margin-left: 40px;
+    margin-left: 50px;
     padding-left: 15px;
+    font-size: 44px;
+    line-height: 1.2;
 }
 
 .centered p{
-  color: gray;
+  width: 100%;
   text-align: center;
-  letter-spacing: 1.2px;
+  letter-spacing: 0.6px;
   padding-top: 35px;
+  max-width: 1100px;
+  margin-left: 15px;
 }
 
 /* ----------------------------------------------------------------------------------------------------- */
-.store-items{
+
+
+#store-items{
   text-align: center;
   background-color: #f7eee2;
-  height: 500px;
+  /* height: 500px; */
+  width: 100%;
+  background-color: #f7eee2;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  text-align: center;
+}
+
+.store-text{
+  color: gray;
+  letter-spacing: 1.4px;
+  font-size: 18px;
+  margin-top: 15px;
+  font-weight: 500;
 }
 
 .row{
-  width: 75%;
-  margin-left: 12.5%;
+  margin-top: 70px;
+  width: 64%;
+  margin-left: 18%;
 }
 
 .icon i{
-  font-size: 65px;
+  font-size: 62px;
   color: white;
   background-color: #e3b375;
-  padding: 40px;
+  padding: 42px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   border-radius: 50%;
+  transition: all 0.3s;
 }
 
 
 /* ----------------------------------------------------------------------------------------------------- */
 
+#store-shop{
+  /* padding-top: 75px; */
+  /* padding-bottom: 75px; */
+  /* text-align: center; */
+  font-family: 'Poppins' sans-serif;
+}
 
+.card{
+  background-color: #f5f6fb;
+  width: 25%;
+  text-align: center;
+  padding: 40px 30px;
+  margin: 16px;
+  border-top-left-radius: 45px;
+  border-bottom-left-radius: 45px;
+  border-bottom-right-radius: 45px;
+}
 
+.card-img-top{
+  margin-bottom: 25px;
+  border-radius: 50%;
+  align-items: center;
+  /* text-align: center; */
+}
 
+.card-text{
+  font-style: italic;
+  color: #8b8b99;
+}
+
+.testimonial-by{
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 24px;
+  margin-bottom: 0px;
+}
+
+.job-role{
+  color: #8b8b99;
+  font-size: 12px;
+  font-style: italic;
+}
 
 
 /* ----------------------------------------------------------------------------------------------------- */
@@ -227,6 +311,8 @@ body{
   justify-content: stretch;
 }
 
+
+
 .step{
   /* width: 100%; */
   margin: 0;
@@ -235,6 +321,16 @@ body{
   /* flex-direction: row; */
   /* justify-content: stretch; */
   /* align-items: center; */
+}
+
+
+
+.step p{
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  line-height: 1.6;
+  margin-top: 0;
+  font-family: 'Poppins';
 }
 
 #step1{
@@ -276,6 +372,21 @@ body{
 .step i{
   font-size: 96px;
   margin-bottom: 10px;
+  transition: all 0.3s;
+}
+
+.step:hover i{
+  font-size: 125px;
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+}
+
+.fa-paint-brush:before{
+  content: "\f1fc";
+  /* font-size: larger; */
+  /* transform: scale(5%); */
 }
 
 .step h3{
@@ -284,4 +395,27 @@ body{
 
 .step p{
   margin-top: 14px;
+}
+
+/* ----------------------------------------------------------------------------------------------------- */
+
+#last-section{
+  width: 70%;
+  font-family: 'Poppins', sans-serif;
+}
+
+.address-head{
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+  margin-top: 32px;
+}
+
+.address-lines{
+  font-size: 16px;
+  font-weight: 400;
+  color: #8b8b99;
+  letter-spacing: 0.5px;
+  line-height: 2;
+  margin: 0;  
 }
