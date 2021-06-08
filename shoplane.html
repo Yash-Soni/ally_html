@@ -14,7 +14,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./shoplane.css">
 </head>
 
 <body>
@@ -28,22 +28,28 @@
     <script>
         
         let title;
-        let brandElenent, productElement, imageElement, priceElement;
+        let imageElement, brandElenent, productElement, priceElement;
         const products = document.getElementById("products")
         for (let product of productList) {
             const {preview, name, brand, price } = product;
             
+            
+            productElement = document.createElement('div');
+            //product name
+            productElement.style.width = '15%';
+            productElement.style.color = 'red';
+            productElement.textContent = name;
+            products.appendChild(productElement);
+
+
             //Image
             imageElement = document.createElement('img');
             imageElement.src = preview;
             imageElement.width = '250';
             productElement.appendChild(imageElement)
 
-            //product name
-            productElement = document.createElement('div');
-            productElement.style.width = '15%';
-            productElement.style.color = 'red';
-            productElement.textContent = name;
+
+            
 
             // Description
             // descriptionElement = document.createElement('p');
@@ -66,7 +72,7 @@
 
 
             //Append ALL
-            products.appendChild(productElement)
+            // products.appendChild(productElement)
         }
         for (let i = 0; i < 3; i++) {
             title = document.createElement('h1')
