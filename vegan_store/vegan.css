@@ -254,6 +254,14 @@ body{
   transition: all 0.3s;
 }
 
+.icon:hover i{
+  font-size: 125px;
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+}
+
 
 /* ----------------------------------------------------------------------------------------------------- */
 
@@ -381,12 +389,6 @@ body{
   transition-duration: 0.3s;
   transition-timing-function: ease;
   transition-delay: 0s;
-}
-
-.fa-paint-brush:before{
-  content: "\f1fc";
-  /* font-size: larger; */
-  /* transform: scale(5%); */
 }
 
 .step h3{
