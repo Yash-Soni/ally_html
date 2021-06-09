@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List</title>
+
+    <link rel="stylesheet" href="list.css">
+
+</head>
+<body>
+
+    <input type="text" id="inp">
+    <button id="add">Add new</button>
+    <div id="cart">
+        
+
+    </div>
+
+
+    <script>
+        const cart = document.querySelector('#cart');
+        const inp = document.querySelector('#inp');
+        const add = document.querySelector('#add');
+
+        let inp_id = 0;
+        let todo=[];
+
+        function removeItem(i)
+        {
+            // alert(`You are removing an item`);
+            todo = todo.filter(item => item.id !== i);
+            
+        }
+
+        add.addEventListener('click', (addevent)=>{
+            const str_val = inp.value;
+            const list_item = document.createElement('div');
+            list_item.className = 'list';
+            list_item.textContent = str_val;
+            list_item.id = inp_id;
+            todo.push({title:str_val, id: inp_id});
+
+            const remove_button = document.createElement('button');
+            remove_button.className = 'rem_button';
+            remove_button.id = inp_id;
+            remove_button.innerText = 'Del';
+            remove_button.style.width = '60px';
+            remove_button.style.height = '20px';
+            remove_button.style.border = '3px solid black';
+            remove_button.style.marginLeft = '10px';
+            inp_id++;
+
+            remove_button.addEventListener('click', (event)=>{
+                removeItem(event.target.id);
+
+            });
+
+            list_item.appendChild(remove_button);
+            cart.appendChild(list_item);
+        });
+
+    </script>
+</body>
+</html>

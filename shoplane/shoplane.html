@@ -20,23 +20,62 @@
 <body>
 
     <div>
-        <h1>Title</h1>
+        <h1>Clothing for Men and Women</h1>
     </div>
+
+    <label >Mass</label>
+    <input type="mass" placeholder="Enter value"><br>
+    <label >Height</label>
+    <input type="height" placeholder="Enter value">
+
+    <button>Click Me</button>
+
+
+    <script>
+        const button = document.querySelector("button");
+        const mass = document.querySelector("#mass");
+        const height = document.querySelector("#height");
+
+        button.addEventListener('click', (event)=>{
+            const value = mass.value/height.value;
+            alert(`the BMI is ${value}`);
+        })
+
+    </script>
+
 
     <div id="products"></div>
     <script src="commonData.js"></script>
     <script>
         
-        let title;
+        let title, item;
         let imageElement, brandElenent, productElement, priceElement;
         const products = document.getElementById("products")
+        title = document.createElement('h1');
+        title.className = "title";
+        title.textContent = "Clothing for Men and Women";
+        title.style.fontSize = '44px';
+        products.appendChild(title);
+        // products.write('<br>');
+
+        products.style.display = 'flex';
+        
+
+
         for (let product of productList) {
-            const {preview, name, brand, price } = product;
-            
+            const {preview, name, brand, price, id } = product;
+            if(id < 6){
+                
+            // products.style.justifyContent = 'center';
+            item = document.createElement('div');
+            item.className = 'item';
+            item.style.border = '5px solid black';
+            item.style.margin = '5px';
             
             productElement = document.createElement('div');
             //product name
-            productElement.style.width = '15%';
+            productElement.style.width = '20%';
+            productElement.style.fontSize = '25px';
             productElement.style.color = 'red';
             productElement.textContent = name;
             products.appendChild(productElement);
@@ -60,13 +99,15 @@
             //brand
             brandElenent = document.createElement('p');
             brandElenent.textContent = brand;
-            brandElenent.style.fontSize = '20px';
+            brandElenent.style.fontSize = '15px';
             productElement.appendChild(brandElenent);
 
 
             //Price
             priceElement = document.createElement('p');
             priceElement.textContent = price;
+            priceElement.style.fontSize = '18px';
+            // priceElement.insertBefore("Rs ");
             priceElement.style.color = '#009688';
             productElement.appendChild(priceElement);
 
@@ -74,13 +115,66 @@
             //Append ALL
             // products.appendChild(productElement)
         }
-        for (let i = 0; i < 3; i++) {
-            title = document.createElement('h1')
-            title.className = "title"
-            title.textContent = i
-            title.style.fontSize = '50px';
-            title.style.color = 'red';
-            document.body.appendChild(title)
+
+        else{
+            if(id == 6){
+                // products.write('<br>');
+                title = document.createElement('h1');
+                title.className = "title";
+                title.textContent = "Accessories for Men and Women";
+                title.style.fontSize = '44px';
+                products.appendChild(title);
+            }
+
+            productElement = document.createElement('div');
+            //product name
+            productElement.style.width = '20%';
+            productElement.style.fontSize = '25px';
+            productElement.style.color = 'red';
+            productElement.textContent = name;
+            products.appendChild(productElement);
+
+
+            //Image
+            imageElement = document.createElement('img');
+            imageElement.src = preview;
+            imageElement.width = '250';
+            productElement.appendChild(imageElement)
+
+
+            
+
+            // Description
+            // descriptionElement = document.createElement('p');
+            // descriptionElement.textContent = description;
+            // descriptionElement.style.color = 'blue';
+            // productElement.appendChild(descriptionElement)
+
+            //brand
+            brandElenent = document.createElement('p');
+            brandElenent.textContent = brand;
+            brandElenent.style.fontSize = '15px';
+            productElement.appendChild(brandElenent);
+
+
+            //Price
+            priceElement = document.createElement('p');
+            priceElement.textContent = price;
+            priceElement.style.fontSize = '18px';
+            priceElement.style.color = '#009688';
+            productElement.appendChild(priceElement);
+            
+        }
+
+        // for (let i = 0; i < 3; i++) {
+        //     title = document.createElement('h1')
+        //     title.className = "title"
+        //     title.textContent = i
+        //     title.style.fontSize = '50px';
+        //     title.style.color = 'red';
+        //     document.body.appendChild(title)
+        //     }
+            
 
 
             // <div class="card" style="width: 15%; min-width: 200px;">

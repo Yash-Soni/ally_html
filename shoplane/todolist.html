@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="list.css">
+</head>
+<body>
+    <input type="text" id="input">
+    <button id="button">Add</button>
+    <div id="items">
+
+    </div>
+
+    <script>
+        let todo = [];
+        let id_num = 1;
+
+        const newitem = document.querySelector('#input');
+        const add_button = document.querySelector('#button');
+        const list = document.querySelector('#items');
+
+        //methods for supporting the list
+
+        const display_list = ()=>{
+            list.innerHTML = '';
+            
+            todo.forEach(item =>{
+                const element = document.createElement('div');
+                const details = document.createElement('p');
+                const remove = document.createElement('button');
+
+                details.innerText = item.title;
+
+                remove.innerText = 'Del';
+                remove.style.width = '60px';
+                remove.style.height = '20px';
+                remove.style.border = '3px solid black';
+                remove.style.marginLeft = '10px';
+                remove.addEventListener('click', ()=> removeItem(item.id));
+
+                element.appendChild(details);
+                element.appendChild(remove);
+                list.appendChild(element);
+            })
+
+        };
+
+        const removeItem = (i)=>{
+            todo = todo.filter(item => item.id != i)
+            display_list();
+        };
+
+        //when the add button the browser will be clicked, this event will be called
+        add_button.addEventListener('click', ()=>{
+            const str_val = newitem.value;
+
+            todo.push({title:str_val, id: id_num});
+            id_num++;
+
+            display_list();
+        });
+        
+
+
+    </script>
+
+</body>
+</html>
