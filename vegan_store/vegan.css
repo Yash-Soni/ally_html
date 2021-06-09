@@ -255,7 +255,7 @@ body{
 }
 
 .icon:hover i{
-  font-size: 125px;
+  font-size: 110px;
   transition-property: all;
   transition-duration: 0.3s;
   transition-timing-function: ease;
@@ -384,7 +384,7 @@ body{
 }
 
 .step:hover i{
-  font-size: 125px;
+  font-size: 110px;
   transition-property: all;
   transition-duration: 0.3s;
   transition-timing-function: ease;
