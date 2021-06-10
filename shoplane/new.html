@@ -36,63 +36,63 @@
 
 
     <script>
-        const fname = document.querySelector('#firstName');
-        const lname = document.querySelector('#lastName');
-        const age = document.querySelector('#age');
-        const addr = document.querySelector('#address');
+        // const fname = document.querySelector('#firstName');
+        // const lname = document.querySelector('#lastName');
+        // const age = document.querySelector('#age');
+        // const addr = document.querySelector('#address');
 
 
 
-        const button = document.querySelector("button");
-        button.addEventListener('click', (event)=>{
-            const fullname = fname.value + lname.value;
-            const personAge = age.value;
-            const personAddr = addr.value;
-            alert(`Name: ${fullname} \n Age: ${personAge} \n  Address: ${personAddr}`)
-        })
+        // const button = document.querySelector("button");
+        // button.addEventListener('click', (event)=>{
+        //     const fullname = fname.value + lname.value;
+        //     const personAge = age.value;
+        //     const personAddr = addr.value;
+        //     alert(`Name: ${fullname} \n Age: ${personAge} \n  Address: ${personAddr}`)
+        // })
 
-        function getrandom(){
-            const letters = '0123456789ABCDEF';
-            let color = '#';
-            for(let i=0; i<6; i++)
-            {
-                color += letters[Math.floor(Math.random() * 16)];
-            }
-            return color;
-        }
+        // function getrandom(){
+        //     const letters = '0123456789ABCDEF';
+        //     let color = '#';
+        //     for(let i=0; i<6; i++)
+        //     {
+        //         color += letters[Math.floor(Math.random() * 16)];
+        //     }
+        //     return color;
+        // }
 
-        let box;
+        // let box;
 
-        const boxnum = document.querySelector('#boxid');
+        // const boxnum = document.querySelector('#boxid');
 
-        const submit = document.querySelector("#btn");
+        // const submit = document.querySelector("#btn");
 
-        const box_container = document.querySelector("#boxes");
+        // const box_container = document.querySelector("#boxes");
         
-        submit.addEventListener('click', (event)=>{
+        // submit.addEventListener('click', (event)=>{
             
-            const number_of_boxes = parseInt(boxnum.value);
-            boxes.innerHTML = '';
-            alert(`${number_of_boxes}`);
-            for(var i=0; i<number_of_boxes; i++)
-            {
-                const block = document.createElement('div');
-                block.id = "block";
-                const box_border = '2px solid' + getrandom(); 
-              // console.log(color);
-                block.style.border = box_border;
-                block.textContent = i;
-                box_container.appendChild(block);
-            }
-        });
+        //     const number_of_boxes = parseInt(boxnum.value);
+        //     boxes.innerHTML = '';
+        //     alert(`${number_of_boxes}`);
+        //     for(var i=0; i<number_of_boxes; i++)
+        //     {
+        //         const block = document.createElement('div');
+        //         block.id = "block";
+        //         const box_border = '2px solid' + getrandom(); 
+        //       // console.log(color);
+        //         block.style.border = box_border;
+        //         block.textContent = i;
+        //         box_container.appendChild(block);
+        //     }
+        // });
 
 
-        const watch = document.querySelector('#time');
-        setInterval(()=> 
-        {
-            const date = new Date();
-            watch.textContent = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`
-        }, 1000);
+        // const watch = document.querySelector('#time');
+        // setInterval(()=> 
+        // {
+        //     const date = new Date();
+        //     watch.textContent = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`
+        // }, 1000);
 
         
         const timeTarget = document.querySelector('#stopwatch');
@@ -100,29 +100,39 @@
         const stopIt = document.querySelector('#stop');
         const clearIt = document.querySelector('#clear');
 
-        let hr, min, sec;
+        let is_running = false;
+
         
-        function settimer(){
-            hr = 00;
-            min = 00;
-            sec = 00;
+
+        const stop_watch = ()=>{
+            if(is_running === true){
+                clearInterval(interval);
+            }
         }
 
-        interval = startIt.addEventListener('click', (e)=>{
-
-        }, 100);
-
-        // stopIt.addEventListener('click', (e)=>{
-        //         const stop_time;
-
-        // });
-
-        // clearIt.addEventListener('click', (e)=>{
-        //         const clear_time = new Date();
-        //         clearInterval();
-        // });
-
         clearInterval(interval);
+
+        startIt.addEventListener('click', ()=>{
+            if(is_running === false)
+            {
+                interval = setInterval(()=>{
+                    const current_time = new Date();
+
+                }, 100);
+                is_running = true;
+            }
+        })
+
+        stopIt.addEventListener('click', ()=>{
+            stop_watch();
+            is_running = false;
+        });
+
+        clearIt.addEventListener('click', ()=>{
+            clearInterval(interval);
+            is_running = false;
+
+        })
 
     </script>
 </body>
