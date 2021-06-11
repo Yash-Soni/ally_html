@@ -19,38 +19,23 @@
 
 <body>
 
-    <div>
+    <!-- <div>
         <h1>Clothing for Men and Women</h1>
     </div>
 
-    <label >Mass</label>
-    <input type="mass" placeholder="Enter value"><br>
-    <label >Height</label>
-    <input type="height" placeholder="Enter value">
-
-    <button>Click Me</button>
-
-
-    <script>
-        const button = document.querySelector("button");
-        const mass = document.querySelector("#mass");
-        const height = document.querySelector("#height");
-
-        button.addEventListener('click', (event)=>{
-            const value = mass.value/height.value;
-            alert(`the BMI is ${value}`);
-        })
-
-    </script>
+    <div>
+        <h1>Accessories for Men and Women</h1>
+    </div> -->
+    
 
 
     <div id="products"></div>
     <script src="commonData.js"></script>
     <script>
         
-        let title, item;
-        let imageElement, brandElenent, productElement, priceElement;
-        const products = document.getElementById("products")
+        const title, item;
+        const imageElement, brandElenent, productElement, priceElement;
+        const products = document.querySelector("#products")
         title = document.createElement('h1');
         title.className = "title";
         title.textContent = "Clothing for Men and Women";
@@ -58,7 +43,7 @@
         products.appendChild(title);
         // products.write('<br>');
 
-        products.style.display = 'flex';
+        // products.style.display = 'flex';
         
 
 

@@ -23,23 +23,69 @@
 # day_check(day1)
 # day_check(day2)
 
-class Book
+# class Book
 
-    def name
-        puts "The book"
+#     def id
+#         puts "The book"
+#     end
+
+#     def author
+#         puts "The Author"
+#     end
+
+#     def self.price
+#         puts"Your Attention"
+#     end
+
+# end
+
+# ob = Book.new
+# ob.id
+# ob.author
+# Book.price
+
+# score = 100
+# if score >= 100
+#     puts "Century"
+
+#     elsif score >=50 && score < 100
+#         puts "Half Century"
+
+#     else 
+#         puts "Well Played"
+# end
+
+
+# word = "Determination"
+# word.length
+# word.include? "tion"
+# word.include? "tic"
+# word.clear
+# word.empty?
+
+
+class Company
+    def initialize(employee)
+      @employee = employee
     end
-
-    def author
-        puts "The Author"
+  
+    def ask_employee_id
+      @employee.tell_id 
     end
-
-    def self.price
-        puts"Your Attention"
+  end
+  
+  class Employee
+    def initialize(id)
+      @id = id
     end
+  
+    def tell_id
+      @id  
+    end
+  end
+  
+  employee = Employee.new('Emp_No: 1234')
+  company = Company.new(employee)
+  
+  p company.ask_employee_id
 
-end
-
-ob = Book.new
-ob.name
-ob.author
-Book.price
