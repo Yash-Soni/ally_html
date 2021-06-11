@@ -22,7 +22,6 @@
 </head>
 
 <body>
-
     
     <h2>Clothing for Men and Women</h2>
     <div id='clothing'>    
@@ -34,14 +33,10 @@
     <div id = 'accessories'>
     </div>
     
-
-
     <!-- <div id="products"></div> -->
     <script src="commonData.js"></script>
     <script>
         
-        
-
         let title, item;
         let imageElement, brandElenent, productElement, priceElement;
         
@@ -49,7 +44,6 @@
             let {preview, name, brand, price, id } = product;
             item = document.createElement('div');
             item.className = 'item';
-            // item.style.border = '5px solid black';
             item.style.margin = '5px';
             if(id < 6){
 
@@ -70,7 +64,6 @@
                 productElement.textContent = name;
                 card.appendChild(productElement)
 
-
                 // Description
                 // descriptionElement = document.createElement('p');
                 // descriptionElement.textContent = description;
@@ -88,29 +81,18 @@
                 priceElement = document.createElement('p');
                 priceElement.textContent = price;
                 priceElement.className = 'priceElement';
-                // priceElement.style.fontSize = '18px';
-                // // priceElement.insertBefore("Rs ");
-                // priceElement.style.color = '#009688';
                 card.appendChild(priceElement);
 
 
                 //Append ALL
-                // products.appendChild(productElement)
                 item.appendChild(card);
                 clothing.appendChild(item);
             }
 
         else{
-
                 let accessories = document.querySelector("#accessories")
-                // title = document.createElement('h1');
-                // title.className = "title";
-                // title.textContent = "Clothing for Men and Women";
-                // title.style.fontSize = '44px';
-                // products.appendChild(title);
-               
-                card = document.createElement('div');
 
+                card = document.createElement('div');
 
                 //Image
                 imageElement = document.createElement('img');
@@ -118,17 +100,12 @@
                 imageElement.width = '250';
                 card.appendChild(imageElement);
                 // productElement.appendChild(imageElement)
-
                 
                 // //product name
-                // productElement.style.width = '20%';
-                // productElement.style.fontSize = '25px';
-                // productElement.style.color = 'red';
                 productElement = document.createElement('h3');
                 productElement.className = 'productElement';
                 productElement.textContent = name;
-                card.appendChild(productElement)
-                
+                card.appendChild(productElement)                
                 
                 // Description
                 // descriptionElement = document.createElement('p');
@@ -142,7 +119,6 @@
                 brandElenent.className = 'brandElement'
                 card.appendChild(brandElenent);
 
-
                 //Price
                 priceElement = document.createElement('p');
                 priceElement.textContent = price;
@@ -152,26 +128,6 @@
                 item.appendChild(card);
                 accessories.appendChild(item);
             }
-
-        // for (let i = 0; i < 3; i++) {
-        //     title = document.createElement('h1')
-        //     title.className = "title"
-        //     title.textContent = i
-        //     title.style.fontSize = '50px';
-        //     title.style.color = 'red';
-        //     document.body.appendChild(title)
-        //     }
-            
-
-
-            // <div class="card" style="width: 15%; min-width: 200px;">
-            //     <img src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/7579188/2018/11/5/08a7b230-ee8f-46c0-a945-4e835a3c01c01541402833619-United-Colors-of-Benetton-Men-Sweatshirts-1271541402833444-1.jpg" class="card-img-top" alt="...">
-            //     <div class="card-body">
-            //         <h3 class="card-text">Men Navy Blue Solid Sweatshirt</h3>
-            //         <h4 class="card-text brand">United Colors of Benetton</h4>
-            //         <h5 class="card-text price">Rs 2599</h5>
-            //     </div>
-            //     </div>
         }
     </script>
 </body>
