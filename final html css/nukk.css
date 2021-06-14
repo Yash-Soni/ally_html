@@ -1,5 +1,12 @@
 body{
     font-family: 'Dosis' , sans-serif;
+    margin-top: 2%;
+    margin-right: 2%;
+    margin-left: 2%;
+    font-family: 'Dosis', sans-serif;
+    color: #121213;
+    font-size: 14px;
+    line-height: 20px;
 }
 
 img{
@@ -8,26 +15,198 @@ img{
     display: inline-block;
 }
 
+section{
+    padding: 4% 5%;
+}
+
+/* --------------------------------------------------------------------------------------------------------------- */
+
+.page-content{
+    overflow: hidden;
+}
+
+
+
 
 .banner{
-    background-image: linear-gradient(76deg, rgba(193, 195, 204, 0.83) 35%, rgba(193, 195, 204, 0.28) 65%), url(../img/slide-2.jpg);
+    background-image: linear-gradient(76deg, rgba(193, 195, 204, 0.83) 35%, rgba(193, 195, 204, 0.28) 65%), url(https://nuuk-e3eaa.firebaseapp.com/assets/img/slide-2.jpg);
+}
+
+
+.brand-name{
+    position: absolute;
+    /* display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox; */
+    display: flex;
+    height: 110px;
+    padding-right: 35px;
+    padding-left: 35px;
+    /* -webkit-box-pack: center;
+    -webkit-justify-content: center; */
+    -ms-flex-pack: center;
+    justify-content: center;
+    /* -webkit-box-align: center;
+    -webkit-align-items: center; */
+    /* -ms-flex-align: center; */
+    align-items: center;
+    /* -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch; */
+
+    float: left;
+    text-decoration: none;
+    color: #333333;
+
+    /* -webkit-box-ordinal-group: 0;
+    -webkit-order: -1;
+    -ms-flex-order: -1; */
+    order: -1;
+    background-color: #e47312;
+}
+
+.brand-logo{
+    max-width: 100%;
+    vertical-align: middle;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 90px;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 20px;
+    /* margin-top: 0; */
 }
 
 .navigation{
     padding-left: 0%;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
+    padding: 34px 28px 31px;
+    display: flex;
+    
+
     justify-content: space-between;
-    -webkit-box-align: center;
+    align-items: center;
+    width: 90%;
+    margin-top: 2%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 0%;
+    padding-left: 0%;
+    box-sizing: border-box;
+    background-color: #fff;
+    z-index: 1000;
+}
+
+.nav-content{
+    
+    position: relative;
+    display: flex;
+    /* padding: 31px 14px; */
+    justify-content: space-evenly;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #121213;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .2s;
+    align-items: center;
+    cursor: pointer;
+    float: right;
+    
+    margin-right: 15px;
+}
+
+.nav-button{
+    height: 100%;
+    margin-left: 20px;
+    padding: 34px 28px 31px;
+    background-color: #e47312;
+    /* -webkit-transition: all 300ms ease; */
+    /* transition: all 300ms ease; */
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+}
+
+.main-title{
+    color: #fff;
+    font-size: 62px;
+    line-height: 70px;
+
+
+    position: relative;
+    z-index: 2;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 42px;
+    line-height: 50px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.main-title h1{
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.main-title h4{
+    margin-top: 10px;
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 5px;
+    color: hsla(0, 0%, 100%, 0.7);
+}
+
+.main-title button{
+    display: block;
+    /* width: 100%; */
+    border: none;
+    color: white;
+    border-radius: 0px;
+    background-color: #e47312;
+    margin-top: 15px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+/*-----------------------------------------------------------------------------------------------*/
+
+.specializations{
+    padding-top: 10%;
+    padding-bottom: 4%;
+
+    box-sizing: border-box;
+    
+}
+
+.title-wrap{
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 7%;
+    /* -webkit-box-pack: justify; */
+    /* -webkit-justify-content: space-between; */
+    /* -ms-flex-pack: justify; */
+    /* justify-content: space-between; */
+    /* -webkit-box-align: center; */
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    background-color: #fff;
 }
 
+
 .top-title.absolute{
-    position: absolute;
+    /* position: absolute; */
     left: -53px;
     top: -26px;
     z-index: 1;
@@ -53,6 +232,13 @@ h1{
     font-weight: 600;
 }
 
+.sidelink{
+    color: #919198;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
 .card-img-top{
     width: 60px;
     max-width: 100%;
@@ -69,6 +255,7 @@ h1{
     margin-left: -10px;
     margin-right: -10px;
     width: 70%;
+    /* display: block; */
 }
 
 .card-text{
@@ -95,10 +282,16 @@ h1{
 
 /*-----------------------------------------------------------------------------------------------*/
 
+
+
 .row-flex{
     display: flex;
     align-items: center;
-    margin-top: 15%;
+    margin-top: 5%;
+}
+
+.w-col-6{
+    width: 50%;
 }
 
 .shape-image{
@@ -111,11 +304,78 @@ h1{
     color: #919197;
     font-size: 17px;
     line-height: 25px;
+    margin-left: 20px;
 }
 
 .margin-page{
     margin-top: 10%;
 }
+
+/*-----------------------------------------------------------------------------------------------*/
+
+.projects{
+    background-color: #f7f8fc;
+}
+
+/* .project-content{
+    overflow: hidden;
+} */
+
+.col a{
+    padding-top: 20px;
+    padding-right: 20px;
+    float: left;
+
+    max-width: 100%;
+    display: inline-block;
+
+    background-color: transparent;
+}
+
+
+.img-overlay{
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: .2s;
+    opacity: 0;
+}
+
+
+.circle{
+    display: flex;
+    width: 90px;
+    height: 90px;
+    padding-right: 11px;
+    padding-left: 11px;
+    justify-content: center;
+    -webkit-box-pack: center;
+    align-items: center;
+    border: none;
+    border-radius: 100%;
+    background-image: linear-gradient(59deg, #ff6361, #e47312);
+    color: #fff;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+/*-----------------------------------------------------------------------------------------------*/
+
+.facts{
+    /* display: inline-block; */
+    /* flex-direction: column; */
+    /* justify-content: space-evenly; */
+    /* align-items: center; */
+}
+
 
 .fun-text {
     margin-bottom: 10px;
@@ -126,11 +386,57 @@ h1{
 }
 /*-----------------------------------------------------------------------------------------------*/
 
+#get-free-quote{
+    padding-top: 7%;
+    padding-bottom: 7%;
+    background-color: #e47312;
+    background-image: linear-gradient(72deg, #e47312, rgba(255, 99, 97, 0.78)), url(https://nuuk-e3eaa.firebaseapp.com/assets/img/banner-2.jpg);
+    background-position: 0px 0px, 50% 50%;
+    background-size: auto, cover;
+    background-repeat: repeat, no-repeat;
+    background-attachment: scroll, fixed;
+    
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
 
+.quote-content{
+    color: white;
+}
 
+.quote-link{
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 15px;
+    padding-bottom: 5px;
+}
 
+.quote-link:hover{
+    color: none;
+    text-decoration: underline;
+}
 
 /*-----------------------------------------------------------------------------------------------*/
+.logo{
+    display: flex;
+    max-width: 1200px;
+    background-image: linear-gradient(56deg, #e47312, #ff6361);
+    padding-top: 3%;
+    padding-bottom: 3%;
+    color: white;
+    margin-right: auto;
+    margin-left: auto;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
 .footer{
     position: relative;
     z-index: 1;
