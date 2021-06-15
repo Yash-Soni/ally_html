@@ -29,6 +29,10 @@
 # end
 
 # -----------------------------------------------------------------------
+
+# Prime numbers in the range of 1..10 are: 2,3,5,7
+#                 Hence we get the output: 4
+
 require 'prime'
 
 def count_prime_numbers(number)
@@ -60,13 +64,19 @@ puts count_prime_numbers(num)
 
 # -----------------------------------------------------------------------
 
+#Factorial:
+
+# Factorial of a number n: n * (n-1) * (n-2) * ... * 1 : n!
+# For a number n = 5, Factorial of n wil be as follows: 5*4*3*2*1 = 120
+
+
 def factorial(num)
     fac = 1
-    (2..num).each do |item|
+    (1..num).each do |item|
         fac = fac*item
     end
     puts fac
 end
 
-num = 5
+num = 7
 factorial(num)
