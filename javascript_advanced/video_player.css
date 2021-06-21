@@ -1,0 +1,103 @@
+body{
+    font-family: 'Caveat Brush', cursive;
+    background-color: #54c3ef;
+}
+
+header{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    font-family: sans-serif;
+}
+
+.views{
+    display: inline;
+    float: left;
+}
+
+.icons{
+    display: inline;
+    
+    /* padding-top: 1%0; */
+    /* margin-right: 20px; */
+    /* margin-bottom: 50px; */
+    /* float: right; */
+    /* margin-bottom: 0px; */
+}
+
+article{
+    color: darkgoldenrod;
+    font-size: 65px;
+    text-align: center;
+}
+
+main{
+    background-color: white;
+    width: 55%;
+    font-family: sans-serif;
+    display: flex;
+    /* box-sizing: border-box; */
+    border-radius: 6px;
+    padding-left: 16px;
+    /* padding-right: 0; */
+    margin: 2% 20% 6%;
+    /* margin-right: 1200px; */
+}
+
+
+section{
+    background-color: white;
+    /* width: 55%; */
+    font-family: sans-serif;
+    /* text-align: left; */
+    display: inline-block;
+    /* box-sizing: border-box; */
+    border-radius: 6px;
+    padding-right: 10px;
+    /* float: left; */
+    
+    border-right: 1px dashed black;
+    border-collapse: collapse;
+}
+
+aside{
+    /* width: 20%; */
+    float: right;
+    display: inline;
+    /* background-color: white; */
+}
+
+section p{
+    width: 100%;
+    font-size: 20px;
+    display: inline-block;
+    text-align: left;
+    
+}
+
+figure{
+    padding-bottom: 10px;
+    border: 1px dashed black;
+    border-radius: 6px;
+}
+
+.images{
+    width: 300px;
+    /* border: 1px dashed black; */
+    
+}
+
+figcaption{
+    font-weight: 700;
+}
+
+
+.content h2{
+    /* float: left; */
+}
+
+footer{
+    background-color: whitesmoke;
+    font-size: 30px;
+    text-align: center;
+}

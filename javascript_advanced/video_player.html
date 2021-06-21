@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="video_player.css">
+
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <header>Video player</header>
+    <a href="index.html" style="font-family: Arial, Helvetica, sans-serif;">back to Home</a>
+    <article style="color: #fad744; font-size: 100px;">
+        The Video Player
+    </article>
+    
+    <main>
+    
+        <section>
+
+            
+
+            <video width="100%" height="400px" controls>
+                  <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4"> ->
+                 
+            </video>
+            <p class="views">96.4K Views</p>
+            <div class="icons">
+                <i class="fa fa-heart-o" style="font-size:24px"></i>
+                <i class="fa fa-paper-plane-o" style="font-size:24px"></i>
+            </div>
+            
+            <hr/>
+
+            <div class="content">
+                <h2>Croissants | Flour and Stone</h2>
+
+                <p>There is no other way but to commit wholeheartedly to a relationship with a croissant. We have all found ourselves at the mercy of its allure. Here, in another epic film by the uber talented Nathan Rodger, our Erin divulges her personal romance with The Croissant.</p>
+            </div>
+
+
+        </section>
+        
+
+        <aside>
+            <!-- <figure >
+                <img class="images" src="https://i.vimeocdn.com/video/600595198_390x220.webp" alt="">
+                <figcaption>Croissants | Flour and Stone</figcaption>
+            </figure>
+    
+            <figure>
+                <img class="images" src="https://i.vimeocdn.com/video/604150056_390x220.webp" alt="">
+                <figcaption>Perfect Mashed Potatoes and Gravy</figcaption>
+            </figure>
+    
+            <figure >
+                <img class="images" src="https://i.vimeocdn.com/video/726986673_390x220.webp" alt="">
+                <figcaption>The Heart of Soba</figcaption>
+            </figure>
+    
+            <figure>
+                <img class="images" src="https://i.vimeocdn.com/video/570486309_390x220.webp" alt="">
+                <figcaption>Grilled Cheese 9 Ways</figcaption>
+            </figure>
+
+            <figure>
+                <img class="images" src="https://i.vimeocdn.com/video/602705517_390x220.webp" alt="">
+                <figcaption>Pineapple Cheesecake</figcaption>
+            </figure>
+    
+            <figure>
+                <img class="images" src="https://i.vimeocdn.com/video/537261616_390x220.jpg" alt="">
+                <figcaption>Lemony Chicken Noodle Soup</figcaption>
+            </figure>
+
+            <figure >
+                <img class="images" src="https://i.vimeocdn.com/video/608805594_590x332.jpg" alt="">
+                <figcaption>Pumpkin Roll</figcaption>
+            </figure>
+    
+            <figure>
+                <img class="images" src="https://i.vimeocdn.com/video/601730519_590x332.jpg" alt="">
+                <figcaption>How to Brine a Turkey</figcaption>
+            </figure>
+
+            <figure>
+                <img class="images" src="https://i.vimeocdn.com/video/456852083_590x332.jpg" alt="">
+                <figcaption>Stop Motion Dry-Brined Turkey Recipe</figcaption>
+            </figure>
+    
+            <figure>
+                <img class="images" src="https://i.vimeocdn.com/video/600328152_590x332.jpg" alt="">
+                <figcaption>Butternut Squash Ravioli</figcaption>
+            </figure> -->
+
+
+    
+        </aside>
+
+
+    </main>
+
+
+    <script>
+        let playlist = []
+        fetch("https://5d76bf96515d1a0014085cf9.mockapi.io/playlist")
+        .then(res = res.json())
+        .then(data => {
+            data => data.forEach(element => {
+                aside_Videos = document.createElement("div");
+                aside_Videos.className = "aside-videos";
+                thumbnail = document.createElement("img");
+                thumbnail.className = "thumbnail";
+                thumbnail.src = element.src;
+                aside_Videos.appendChild(thumbnail)
+                title = document.createElement("h3");
+                title.className = "description";
+                title.textContent = element.title;
+                aside_Videos.appendChild(title);
+                $("aside").appendChild(aside_Videos);
+
+            })
+        })
+
+    </script>
+
+    <footer>
+        <p>That's about it</p>
+        <p>@copyright 2021</p>
+    </footer>
+
+
+</body>
+</html>
