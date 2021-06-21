@@ -52,7 +52,7 @@
         </section>
         
 
-        <aside>
+        <aside id="side">
             <!-- <figure >
                 <img class="images" src="https://i.vimeocdn.com/video/600595198_390x220.webp" alt="">
                 <figcaption>Croissants | Flour and Stone</figcaption>
@@ -112,25 +112,56 @@
 
 
     <script>
-        let playlist = []
-        fetch("https://5d76bf96515d1a0014085cf9.mockapi.io/playlist")
-        .then(res = res.json())
-        .then(data => {
-            data => data.forEach(element => {
-                aside_Videos = document.createElement("div");
-                aside_Videos.className = "aside-videos";
-                thumbnail = document.createElement("img");
-                thumbnail.className = "thumbnail";
-                thumbnail.src = element.src;
-                aside_Videos.appendChild(thumbnail)
-                title = document.createElement("h3");
-                title.className = "description";
-                title.textContent = element.title;
-                aside_Videos.appendChild(title);
-                $("aside").appendChild(aside_Videos);
+        $(document).ready(function(){
+            $("#side").append("<p>See if it works</p>");
+            // fetch("https://5d76bf96515d1a0014085cf9.mockapi.io/playlist")
+            // .then(res = res.json())
+            // .then(data => {
+            //     data.forEach(element => {
+            //         console.log("see here")
+            //         aside_Videos = document.createElement("div");
+            //         // aside_Videos = $("div").append(element.title)
+            //         aside_Videos.className = "aside-videos";
+            //         thumbnail = document.createElement("img");
+            //         thumbnail.className = "thumbnail";
+            //         thumbnail.src = element.src;
+            //         aside_Videos.appendChild(thumbnail);
+            //         title = document.createElement("h3");
+            //         title.className = "description";
+            //         title.textContent = element.title;
+            //         aside_Videos.appendChild(title);
 
-            })
+            //         // $("#side").append(aside_Videos);
+            //         aside.appendChild(aside_Videos)
+
+            //     })
+            // })
         })
+
+        fetch("https://5d76bf96515d1a0014085cf9.mockapi.io/playlist")
+            .then(res = res.json())
+            .then(data => {
+                data.forEach(element => {
+                    console.log("see here")
+                    aside_Videos = document.createElement("div");
+                    // aside_Videos = $("div").append(element.title)
+                    aside_Videos.className = "aside-videos";
+                    video_thumbnail = document.createElement("img");
+                    video_thumbnail.className = "thumbnail";
+                    video_thumbnail.src = element.src;
+                    aside_Videos.appendChild(video_thumbnail);
+                    video_title = document.createElement("h3");
+                    video_title.className = "description";
+                    video_title.textContent = element.title;
+                    aside_Videos.appendChild(video_title);
+
+                    // $("#side").append(aside_Videos);
+                    aside.appendChild(aside_Videos)
+
+                })
+            })
+
+
 
     </script>
 
