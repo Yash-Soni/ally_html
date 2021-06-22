@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOPLANE - A Place For Shopping</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="shoplane.css">
+
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous">
+    </script>
+
+</head>
+<body>
+    
+    <header>
+        <nav class="navbar">
+            <a href="#">
+                <h3>
+                    <span>SHOP</span>
+                    LANE
+                </h3>
+            </a>
+
+            <ul class="nav-links">
+                <li>Home</li>
+                <li>Clothing</li>
+                <li>Accessories</li>
+            </ul>
+
+            <ul class="icons">
+                <li>
+                    <i class="fa fa-search"></i>
+                </li>
+                <li>
+                    <i class="fa fa-shopping-cart">
+                        <span id="cart-count">1</span>
+                      </i>
+                </li>
+                <li>
+                    <i class="fa fa-user-circle-o"></i>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <section class="product_details">
+        <section id="preview"></section>
+        <section id="details">
+            <h1>Hello</h1>
+        </section>
+    </section>
+
+   
+
+
+    <footer>
+        <ul class="online-store">
+          <li><h3>Online Store</h3></li>
+          <li><a href="#">Men Clothing</a></li>
+          <li><a href="#">Women Clothing</a></li>
+          <li><a href="#">Men Accessories</a></li>
+          <li><a href="#">Women Accessories</a></li>
+        </ul>
+        <ul class="helpful-links">
+          <li><h3>Helpful Links</h3></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <ul class="patners">
+          <li><h3>Patners</h3></li>
+          <li><a href="#">Zara</a></li>
+          <li><a href="#">Pantaloons</a></li>
+          <li><a href="#">Levis</a></li>
+          <li><a href="#">Ucb</a></li>
+          <li><a href="#">+ Many More</a></li>
+        </ul>
+        <ul class="address">
+          <li><h3>Address</h3></li>
+          <li>Building 101</li>
+          <li>Central Avenue</li>
+          <li>LA - 902722</li>
+          <li>United States</li>
+        </ul>
+      </footer>
+
+
+      <script src="shoplane.js"></script>
+      <script type="text/javascript">
+        // product_details = productData;
+
+        // item_prev = document.createElement("div");
+        // item_details = document.createElement("div");
+
+        let product_brand, product_info, imageElement, priceElement, descriptionElement, productPreview, cart;
+
+        let product_details = document.querySelector("#product_details");
+
+        let preview = document.getElementById("preview");
+
+
+        let details = document.querySelector("#details");
+
+        //specifying data from productData
+        const { name, brand, description, price, photos } = productData;
+
+        
+        product_info = document.createElement('div');
+
+        //title
+        product_title = document.createElement('h1');
+        product_title.className = 'title';
+        product_title.textContent = name;
+        product_info.appendChild(product_title);
+
+        //brand
+        product_brand = document.createElement("p");
+        product_brand.className = "brand";
+        product_brand.textContent = brand;
+        product_info.appendChild(product_brand);
+
+        //price
+        priceElement = document.createElement('p');
+        priceElement.className = 'price';
+        priceElement.textContent = price;
+        product_info.appendChild(priceElement);
+
+        //description
+        descriptionElement = document.createElement('p');
+        descriptionElement.className = 'describe'
+        descriptionElement.textContent = description;
+        product_info.appendChild(descriptionElement);
+        
+        
+
+        //product images
+        imageElement = document.createElement('img');
+        imageElement.className = 'images';
+        photos.forEach(element => {
+            
+        });
+
+
+        //cart button
+        cart = document.createElement("button")
+        cart.className = "cart";
+        cart.innerText = "Add to Cart";
+        product_info.appendChild(cart);
+
+
+        details.appendChild(product_info)
+        // item_details.appendChild(product_info);
+        // details.appendChild(item_details)
+
+        // product_details.appendChild(details)
+
+    </script>
+
+
+
+</body>
+</html>

@@ -81,6 +81,16 @@ figure{
     border-radius: 6px;
 }
 
+.aside-videos{
+    border: 2px solid black;
+    margin-top: 10px;
+    margin-left: 2px;
+}
+
+.aside-videos:hover{
+    border-color: burlywood;
+}
+
 .images{
     width: 300px;
     /* border: 1px dashed black; */

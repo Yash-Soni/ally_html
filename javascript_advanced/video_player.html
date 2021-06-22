@@ -14,7 +14,8 @@
     <script
     src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous">
+    </script>
 
 </head>
 <body>
@@ -30,11 +31,11 @@
 
             
 
-            <video width="100%" height="400px" controls>
+            <!-- <video width="100%" height="400px" controls>
                   <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4"> ->
                  
-            </video>
-            <p class="views">96.4K Views</p>
+            </video> -->
+            <!-- <p class="views">96.4K Views</p>
             <div class="icons">
                 <i class="fa fa-heart-o" style="font-size:24px"></i>
                 <i class="fa fa-paper-plane-o" style="font-size:24px"></i>
@@ -46,7 +47,7 @@
                 <h2>Croissants | Flour and Stone</h2>
 
                 <p>There is no other way but to commit wholeheartedly to a relationship with a croissant. We have all found ourselves at the mercy of its allure. Here, in another epic film by the uber talented Nathan Rodger, our Erin divulges her personal romance with The Croissant.</p>
-            </div>
+            </div> -->
 
 
         </section>
@@ -112,8 +113,8 @@
 
 
     <script>
-        $(document).ready(function(){
-            $("#side").append("<p>See if it works</p>");
+        // $(document).ready(function(){
+            // $("#side").append("<p>See if it works</p>");
             // fetch("https://5d76bf96515d1a0014085cf9.mockapi.io/playlist")
             // .then(res = res.json())
             // .then(data => {
@@ -136,34 +137,66 @@
 
             //     })
             // })
-        })
+        // }) -->
 
+        fetch("https://5d76bf96515d1a0014085cf9.mockapi.io/video/1")
+        .then(res => res.json())
+        .then(data =>
+            data.forEach(element=>{
+                current_video = document.createElement("div");
+                current_video.className = "cur-video";
+                
+                let page = "https://player.vimeo.com/video/"
+                let video_id = element.vimeoId
+
+                // let url = page+video_id;
+                let url ="https://archive.org/download/Popeye_forPresident/Popeye_forPresident_512kb.mp4"
+
+                video_content = document.createElement("video");
+                video_content.src = url;
+                current_video.appendChild(video_content);
+
+                video_title = document.createElement("h3");
+                video_title.className = "description";
+                video_title.textContent = element.title;
+                current_video.appendChild(video_title);
+
+                $("section").append(current_video);
+
+            })
+        )
+
+    </script>
+
+    <script>
         fetch("https://5d76bf96515d1a0014085cf9.mockapi.io/playlist")
-            .then(res = res.json())
-            .then(data => {
+            .then(res => res.json())
+            .then(data => 
                 data.forEach(element => {
-                    console.log("see here")
                     aside_Videos = document.createElement("div");
                     // aside_Videos = $("div").append(element.title)
                     aside_Videos.className = "aside-videos";
                     video_thumbnail = document.createElement("img");
-                    video_thumbnail.className = "thumbnail";
-                    video_thumbnail.src = element.src;
+                    video_thumbnail.className = "images";
+                    video_thumbnail.src = element.thumbnail;
                     aside_Videos.appendChild(video_thumbnail);
+                    // $("aside_Videos").append(video_thumbnail);
                     video_title = document.createElement("h3");
                     video_title.className = "description";
                     video_title.textContent = element.title;
                     aside_Videos.appendChild(video_title);
 
-                    // $("#side").append(aside_Videos);
-                    aside.appendChild(aside_Videos)
+                    $("#side").append(aside_Videos);
+                    // aside.appendChild(aside_Videos);
 
                 })
-            })
-
+            )
 
 
     </script>
+
+        
+
 
     <footer>
         <p>That's about it</p>

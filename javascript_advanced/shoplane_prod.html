@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoplane</title>
+
+    <link rel="stylesheet" href="shoplane.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous">
+    </script>
+
+
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="#">
+            <h3>
+                <span>SHOP</span>
+                LANE
+            </h3>
+        </a>
+
+        <ul class="nav-links">
+            <li>Home</li>
+            <li>Clothing</li>
+            <li>Accessories</li>
+        </ul>
+
+        <ul class="icons">
+            <li>
+                <i class="fa fa-search"></i>
+            </li>
+            <li>
+                <i class="fa fa-shopping-cart">
+                    <span id="cart-count">1</span>
+                    </i>
+            </li>
+            <li>
+                <i class="fa fa-user-circle-o"></i>
+            </li>
+        </ul>
+
+    </nav>
+    
+    <section class="product_details">
+
+        <div class="left">
+            <img class="main_prev" src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/7579188/2018/11/5/08a7b230-ee8f-46c0-a945-4e835a3c01c01541402833619-United-Colors-of-Benetton-Men-Sweatshirts-1271541402833444-1.jpg" alt="">
+        </div>
+
+        <div class="right">
+            <h1 id="title">Men Navy Blue Solid Sweatshirt</h1>
+            <h3 id="brand">United Colors of Benetton</h3>
+
+            <div id="price">
+            </div>
+
+            <div class="description">
+                <h3>Description</h3>
+
+            </div>
+
+            <div class="product_preview">
+                <h3>Product Preview:</h3>
+            </div>
+
+            <button>Add to Cart</button>
+        </div>
+
+    </section>
+
+    <footer>
+        <ul class="online-store">
+          <li><h3>Online Store</h3></li>
+          <li><a href="#">Men Clothing</a></li>
+          <li><a href="#">Women Clothing</a></li>
+          <li><a href="#">Men Accessories</a></li>
+          <li><a href="#">Women Accessories</a></li>
+        </ul>
+        <ul class="helpful-links">
+          <li><h3>Helpful Links</h3></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <ul class="patners">
+          <li><h3>Patners</h3></li>
+          <li><a href="#">Zara</a></li>
+          <li><a href="#">Pantaloons</a></li>
+          <li><a href="#">Levis</a></li>
+          <li><a href="#">Ucb</a></li>
+          <li><a href="#">+ Many More</a></li>
+        </ul>
+        <ul class="address">
+          <li><h3>Address</h3></li>
+          <li>Building 101</li>
+          <li>Central Avenue</li>
+          <li>LA - 902722</li>
+          <li>United States</li>
+        </ul>
+      </footer>
+
+      <script src="shoplane.js"></script>
+      <script type="text/javascript">
+
+          const { price, description, photos } = productData;
+
+          //price
+          const priceElement = document.getElementById("price");
+          priceElement.textContent = "Price: Rs ";
+          
+          const price_tag = document.createElement('span');
+          price_tag.className = 'price-tag';
+          price_tag.textContent = price;
+          price_tag.style.color = '#009688';
+
+          priceElement.appendChild(price_tag);
+
+          //description
+          const desc = document.querySelector(".description")
+          const product_desc = document.createElement('p');
+          product_desc.textContent = description;
+          desc.appendChild(product_desc);
+
+      </script>
+
+</body>
+</html>
