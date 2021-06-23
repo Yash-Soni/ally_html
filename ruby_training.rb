@@ -1,3 +1,7 @@
+
+
+# https://guides.rubyonrails.org/getting_started.html
+
 # module Checknum
 #     def check(num)
 #         # if num%2==0
