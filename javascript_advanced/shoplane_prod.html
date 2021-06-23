@@ -139,7 +139,7 @@
           const preview_list = document.querySelector(".product_preview");
           const main_preview = document.querySelector("#main_prev");
 
-          const imgId = 0;
+        //   const imgId;
 
           for(let i=0; i<photos.length; i++)
           {
@@ -159,20 +159,19 @@
 
               imgElement.addEventListener("click", function () {
                     document.getElementById("main_prev").src = photos[i];
-                    
+                    // imgElement.onclick = function() {assign_border()};
               });
 
-              
 
             //   imgElement.addEventListener("click", function(i){
             //         allImages = document.getElementsByClassName(preview_image);
             //         for(let element of allImages){
             //             element.classList.remove("active-image")
-                    // }
-                    // imgElement.onclick = function() {erase_border()};
-                    // imgId = i;
-                    // imgId.onclick = function() {assign_border(imgId)};
-                    // i.target.classList.add('active-image');
+            //         }
+            //         // imgElement.onclick = function() {erase_border()};
+            //         // imgId = i;
+            //         // imgId.onclick = function() {assign_border(imgId)};
+            //         i.target.classList.add('active-image');
                     
             //   });
 
