@@ -56,7 +56,7 @@
     <section class="product_details">
 
         <div class="left">
-            <img class="main_prev" src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/7579188/2018/11/5/08a7b230-ee8f-46c0-a945-4e835a3c01c01541402833619-United-Colors-of-Benetton-Men-Sweatshirts-1271541402833444-1.jpg" alt="">
+            <img id="main_prev" src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/7579188/2018/11/5/08a7b230-ee8f-46c0-a945-4e835a3c01c01541402833619-United-Colors-of-Benetton-Men-Sweatshirts-1271541402833444-1.jpg" alt="">
         </div>
 
         <div class="right">
@@ -73,6 +73,7 @@
 
             <div class="product_preview">
                 <h3>Product Preview:</h3>
+                
             </div>
 
             <button>Add to Cart</button>
@@ -132,6 +133,42 @@
           const product_desc = document.createElement('p');
           product_desc.textContent = description;
           desc.appendChild(product_desc);
+
+          //images
+
+          const preview_list = document.querySelector(".product_preview");
+          const main_preview = document.querySelector("#main_prev");
+
+          for(let i=0; i<photos.length; i++)
+          {
+              pic = photos[i];
+
+              const imgElement = document.createElement('img');
+              imgElement.id = i;
+
+              if(i==0){
+                  imgElement.className = "preview_image active_image";
+              }
+              else{
+                  imgElement.className = "preview_image";
+              }
+
+              imgElement.src = pic;
+
+              imgElement.addEventListener("click", function () {
+                    document.getElementById("main_prev").src = photos[i];
+              });
+
+              imgElement.addEventListener("click", function(i){
+                    allImages = document.getElementsByClassName(preview_image);
+                    for(element of allImages){
+                        element.classList.remove("active_image")
+                    }
+                    i.target.classList.add("active_image");
+              });
+
+              preview_list.appendChild(imgElement);
+          }
 
       </script>
 

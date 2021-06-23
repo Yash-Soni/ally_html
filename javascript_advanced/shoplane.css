@@ -84,6 +84,16 @@ button:hover{
     box-shadow: 2px 4px 12px rgb(0 0 0 / 50%);
 }
 
+.active_image{
+    border: 1px solid black;
+    width: 400px;
+}
+
+.preview_image{
+    width: 50px;
+}
+
+
 footer{
     background-color: black;
     margin-bottom: 0px;
