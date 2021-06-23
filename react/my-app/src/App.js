@@ -13,10 +13,10 @@ const App = () => {  //sfc
   return ( 
     <div>
 
-      <Comp />
+      {/* <Comp /> */}
       {/* <h1>App Component</h1> */}
 
-      {/* <Movie /> */}
+      <Movie />
 
       {/* <Topbar />
       <PlacesGrid 

@@ -56,7 +56,7 @@
     <section class="product_details">
 
         <div class="left">
-            <img id="main_prev" src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/7579188/2018/11/5/08a7b230-ee8f-46c0-a945-4e835a3c01c01541402833619-United-Colors-of-Benetton-Men-Sweatshirts-1271541402833444-1.jpg" alt="">
+            <img id="main_prev" src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/7579188/2018/11/5/08a7b230-ee8f-46c0-a945-4e835a3c01c01541402833619-United-Colors-of-Benetton-Men-Sweatshirts-1271541402833444-1.jpg" width="100%" alt="">
         </div>
 
         <div class="right">
@@ -139,15 +139,17 @@
           const preview_list = document.querySelector(".product_preview");
           const main_preview = document.querySelector("#main_prev");
 
+          const imgId = 0;
+
           for(let i=0; i<photos.length; i++)
           {
               pic = photos[i];
 
-              const imgElement = document.createElement('img');
+              var imgElement = document.createElement('img');
               imgElement.id = i;
 
               if(i==0){
-                  imgElement.className = "preview_image active_image";
+                  imgElement.className = "preview_image active-image";
               }
               else{
                   imgElement.className = "preview_image";
@@ -157,18 +159,44 @@
 
               imgElement.addEventListener("click", function () {
                     document.getElementById("main_prev").src = photos[i];
+                    
               });
 
-              imgElement.addEventListener("click", function(i){
-                    allImages = document.getElementsByClassName(preview_image);
-                    for(element of allImages){
-                        element.classList.remove("active_image")
-                    }
-                    i.target.classList.add("active_image");
-              });
+              
+
+            //   imgElement.addEventListener("click", function(i){
+            //         allImages = document.getElementsByClassName(preview_image);
+            //         for(let element of allImages){
+            //             element.classList.remove("active-image")
+                    // }
+                    // imgElement.onclick = function() {erase_border()};
+                    // imgId = i;
+                    // imgId.onclick = function() {assign_border(imgId)};
+                    // i.target.classList.add('active-image');
+                    
+            //   });
+
+              imgElement.onclick = function() {assign_border()};
+
+            //   function erase_border()
+            //   {
+            //     imgElement.style.border = 'none';
+            //   }
+
+              function assign_border()
+              {
+                imgElement.style.border = '2px solid #009688';
+                    // allImages = document.getElementsByClassName(preview_image);
+                    // for(element of allImages){
+                    //     element.style.border = 'none';
+                    // }
+                  
+              }
 
               preview_list.appendChild(imgElement);
           }
+
+        //   preview_list.appendChild(imgElement);
 
       </script>
 

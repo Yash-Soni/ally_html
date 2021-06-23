@@ -49,6 +49,10 @@ body{
     color: rgb(27, 25, 25);
 }
 
+.left{
+    width: 50%;
+}
+
 .right{
     margin-left: 2%;
 }
@@ -62,10 +66,6 @@ body{
     justify-content: center;
 }
 
-.main_prev{
-    width: 450px;
-    height: 600px;
-}
 
 button{
     font-size: 16px;
@@ -84,13 +84,16 @@ button:hover{
     box-shadow: 2px 4px 12px rgb(0 0 0 / 50%);
 }
 
-.active_image{
-    border: 1px solid black;
+.active-image{
+    border: 2px solid #009688;
     width: 400px;
 }
 
 .preview_image{
-    width: 50px;
+    width: 100px;
+    margin: 1%;
+    border-radius: 5%;
+    padding: 1px;
 }
 
 
