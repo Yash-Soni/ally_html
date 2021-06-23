@@ -122,14 +122,23 @@ footer{
     flex-direction: row;
     justify-content: space-around;
     color: white;
-    list-style: outside;
+    /* list-style: outside; */
     text-decoration: none;
-    
+    text-transform: uppercase;
+}
+
+footer h3{
+    cursor: pointer;
 }
 
 footer a{
     text-decoration: none;
     color: white;
     text-transform: uppercase;
-    list-style: none;
+    font-size: small;
+    list-style-type: none;
+}
+
+footer a:hover{
+    color:cadetblue;
 }
